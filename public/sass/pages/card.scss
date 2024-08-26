@@ -1,0 +1,731 @@
+@import '../base/variable.scss';
+
+.main_card_parent {
+    padding: 35px 0 0 0;
+    background-color: $white;
+    border: 1px solid $third_border_color;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .card_parent {
+        padding: 13px;
+        width: calc((100% - 40px) / 3);
+        border: 1px solid $third_border_color;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0px 1px 20px 0px $card_hover_bg_color;
+        }
+
+        .left {
+            margin-bottom: 15px;
+
+            .card_image {
+                height: 253px;
+                overflow: hidden;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        // transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .right {
+            .inner_left {
+                margin-bottom: 15px;
+
+                .title {
+                    display: flex;
+                    gap: 8px;
+                    background-color: $title_bg_color;
+                    padding: 9px;
+                    margin-bottom: 15px;
+
+                    .icon {
+                        flex-shrink: 0;
+                        color: $card_icon_color;
+                        font-size: 18px;
+                    }
+
+                    h3 {
+                        margin-bottom: 0;
+                        font-family: RF Dewi;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        color: $text_color;
+                        word-break: break-word;
+                    }
+                }
+
+                p {
+                    font-family: RF Dewi;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 1px;
+                    word-break: break-word;
+                    color: $text_color;
+                    margin-bottom: 15px;
+
+                }
+
+                .date_time {
+                    display: flex;
+                    align-items: center;
+
+                    .inner_inner_left {
+                        display: flex;
+                        align-items: center;
+                        width: 50%;
+                        flex-shrink: 0;
+                        gap: 10px;
+
+                        .time_icon {
+                            flex-shrink: 0;
+                            color: $time_icon_color;
+                        }
+
+                        .time {
+                            font-family: RF Dewi;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 19.2px;
+                            word-break: break-word;
+                            color: $time_text_color;
+                        }
+                    }
+
+                    .inner_inner_right {
+                        width: calc(100% - 50%);
+                        display: flex;
+                        justify-content: flex-end;
+                        display: none;
+                    }
+                }
+            }
+
+            .inner_right {
+                padding-top: 15px;
+                border-top: 1px solid $border_color;
+
+                .inner_right_inner {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 26px;
+
+                    .flag {
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        flex-shrink: 0;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .desc {
+                        font-family: RF Dewi;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 21.6px;
+                        color: $text_color;
+                        word-break: break-word;
+                    }
+                }
+
+                .read_more {
+                    padding: 10px 12px;
+                    position: relative;
+                    width: fit-content;
+                    z-index: 2;
+                    cursor: pointer;
+
+                    a {
+                        display: inline-block;
+                        font-family: RF Dewi;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 21.6px;
+                        text-align: left;
+                        color: $text_color;
+                        transition: all 0.3s ease;
+                        word-break: break-word;
+                        position: relative;
+                        cursor: pointer;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1%;
+                            background-color: $text_color;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: all 0.3s ease;
+                            border-radius: 3px;
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 0;
+                        background-color: $text_color;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        transition: all 0.3s ease;
+                        border-radius: 3px;
+                        z-index: -1;
+                    }
+
+                    &:hover {
+                        &::after {
+                            height: 100%;
+                            background-color: $btn_bg_color;
+                        }
+
+                        a {
+                            color: $white;
+
+                            &::after {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .main_card_parent {
+        padding: 27px 0 0 0;
+
+        .card_parent {
+
+            .left {
+                .card_image {
+                    height: 227.46px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    .title {
+                        .icon {
+                            font-size: 16px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    p {}
+
+                    .date_time {
+                        .inner_inner_left {
+
+                            .time_icon {}
+
+                            .time {}
+                        }
+
+                        .inner_inner_right {}
+                    }
+                }
+
+                .inner_right {
+
+                    .inner_right_inner {
+                        .flag {}
+
+                        .desc {}
+                    }
+
+                    .read_more {
+
+                        a {}
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main_card_parent {
+        padding: 24px 0 0 0;
+
+        .card_parent {
+
+            .left {
+                .card_image {
+                    height: 194.43px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    .title {
+                        .icon {
+                            font-size: 16px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    p {}
+
+                    .date_time {
+                        .inner_inner_left {
+
+                            .time_icon {}
+
+                            .time {}
+                        }
+
+                        .inner_inner_right {}
+                    }
+                }
+
+                .inner_right {
+                    // gap: 20px;
+
+                    .inner_right_inner {
+                        margin-bottom: 20px;
+
+                        .flag {}
+
+                        .desc {}
+                    }
+
+                    .read_more {
+
+                        a {}
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main_card_parent {
+        padding: 20px 0 0 0;
+
+        // margin-bottom: 80px;
+        .card_parent {
+            width: calc((100% - 20px) / 2);
+
+
+            .left {
+                .card_image {
+                    height: 222.84px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    margin-bottom: 10px;
+
+                    .title {
+                        margin-bottom: 10px;
+
+                        .icon {
+                            font-size: 16px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+
+                    .date_time {
+                        .inner_inner_left {
+
+                            .time_icon {}
+
+                            .time {}
+                        }
+
+                        .inner_inner_right {}
+                    }
+                }
+
+                .inner_right {
+                    padding-top: 10px;
+
+                    .inner_right_inner {
+                        margin-bottom: 20px;
+
+                        .flag {}
+
+                        .desc {}
+                    }
+
+                    .read_more {
+
+                        a {}
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .main_card_parent {
+        gap: 10px;
+        padding: 20px 0 0 0;
+
+        // margin-bottom: 80px;
+        .card_parent {
+            width: calc((100% - 20px) / 3);
+            padding: 10px;
+            border-radius: 6px;
+
+
+            .left {
+                margin-bottom: 10px;
+
+                .card_image {
+                    border-radius: 6px;
+                    height: 123.96px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    margin-bottom: 5px;
+
+                    .title {
+                        padding: 3px 9px;
+                        margin-bottom: 5px;
+
+                        .icon {
+                            font-size: 14px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                    }
+
+                    .date_time {
+                        .inner_inner_left {
+                            gap: 5px;
+
+                            .time_icon {
+                                font-size: 11px;
+                            }
+
+                            .time {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .inner_inner_right {
+                            // display: flex;
+                        }
+                    }
+                }
+
+                .inner_right {
+                    padding-top: 5px;
+
+                    .inner_right_inner {
+                        margin-bottom: 10px;
+
+                        .flag {
+                            margin-top: 3px;
+                        }
+
+                        .desc {
+                            line-height: 17.6px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .read_more {
+                        padding: 5px 6px;
+
+                        a {
+                            font-size: 14px;
+                            line-height: 18.6px;
+
+                            &::after {
+                                bottom: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .main_card_parent {
+        gap: 10px;
+        padding: 12px 0 0 0;
+
+        // margin-bottom: 80px;
+        .card_parent {
+            // width: calc((100% - 20px) / 2);
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+
+
+            .left {
+                margin-bottom: 10px;
+
+                .card_image {
+                    border-radius: 6px;
+                    height: 219.1px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    margin-bottom: 10px;
+
+                    .title {
+                        margin-bottom: 10px;
+                        padding: 5px 9px;
+
+                        .icon {
+                            font-size: 14px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                            font-size: 16px;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+
+                    .date_time {
+                        .inner_inner_left {
+                            gap: 10px;
+
+                            .time_icon {
+                                font-size: 11px;
+                            }
+
+                            .time {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .inner_inner_right {
+                            // display: flex;
+                        }
+                    }
+                }
+
+                .inner_right {
+                    padding-top: 10px;
+
+                    .inner_right_inner {
+                        margin-bottom: 10px;
+
+                        .flag {
+                            // margin-top: 3px;
+                        }
+
+                        .desc {
+                            line-height: 17.6px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .read_more {
+                        padding: 5px 6px;
+
+                        a {
+                            font-size: 14px;
+                            line-height: 18.6px;
+
+                            &::after {
+                                bottom: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .main_card_parent {
+        gap: 10px;
+        padding: 10px 0 0 0;
+
+        // margin-bottom: 80px;
+        .card_parent {
+            // width: calc((100% - 20px) / 2);
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+
+            .left {
+                margin-bottom: 10px;
+
+                .card_image {
+                    border-radius: 6px;
+                    height: 182.23px;
+                }
+            }
+
+            .right {
+                .inner_left {
+                    margin-bottom: 7px;
+
+                    .title {
+                        margin-bottom: 7px;
+                        padding: 3px 9px;
+
+                        .icon {
+                            font-size: 13px;
+                            margin-top: 5px;
+                        }
+
+                        h3 {
+                            font-size: 18px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 7px;
+                        font-size: 13px;
+                        line-height: 18px;
+                    }
+
+                    .date_time {
+                        .inner_inner_left {
+                            gap: 7px;
+
+                            .time_icon {
+                                font-size: 11px;
+                            }
+
+                            .time {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .inner_inner_right {
+                            // display: flex;
+                        }
+                    }
+                }
+
+                .inner_right {
+                    padding-top: 7px;
+
+                    .inner_right_inner {
+                        gap: 7px;
+                        margin-bottom: 7px;
+                        .flag {
+                            margin-top: 1px;
+                            height: 15px;
+                            width: 15px;
+                            line-height: 4px;
+                        }
+
+                        .desc {
+                            line-height: 17.6px;
+                            font-size: 13px;
+                        }
+                    }
+
+                    .read_more {
+                        padding: 5px 6px;
+
+                        a {
+                            font-size: 13px;
+                            line-height: 18.6px;
+
+                            &::after {
+                                bottom: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

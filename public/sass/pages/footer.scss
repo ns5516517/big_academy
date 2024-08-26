@@ -1,0 +1,1040 @@
+@import '../base/variable.scss';
+
+.footer {
+    background-color: $black;
+    padding: 56px 0px 10px 0;
+    overflow: hidden;
+
+    .parent_footer {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 81px;
+
+        .inner_footer {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                border-radius: 10px;
+                bottom: -56px;
+                width: 80%;
+                opacity: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $border_color;
+            }
+
+            .inner_left_parent_footer {
+                .inner_left_inner_parent_footer {
+                    h3 {
+                        font-family: RF Dewi;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        color: $white;
+                        margin-bottom: 30px;
+                    }
+
+                    ul {
+                        li {
+                            margin-bottom: 13px;
+
+                            a {
+                                display: inline-block;
+                                font-family: RF Dewi_Light;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 24.5px;
+                                color: $footer_text_color;
+
+                                .list {
+                                    display: flex;
+                                    gap: 12px;
+
+                                    .icon {
+                                        flex-shrink: 0;
+                                        transition: all 0.3s ease;
+                                    }
+                                }
+
+                                &:hover{
+                                    color: $white;
+                                    .list{
+                                        .icon{
+                                            transform: rotate(360deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .inner_right_parent_footer {
+                .accordian_parent {
+                    h3 {
+                        font-family: RF Dewi;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        color: $white;
+                        margin-bottom: 30px;
+                    }
+
+                    .accordian_inner_parent {
+                        .accordion {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            .accordion-item {
+                                border: unset;
+                                border-radius: 10px;
+                                background-color: $acc_bg_color;
+                                padding: 7px 12px;
+
+
+                                .accordion-header {
+                                    background-color: unset;
+
+                                    .accordion-button {
+                                        background-color: unset;
+                                        padding: 0;
+                                        border: none;
+                                        font-family: RF Dewi_Light;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 21px;
+                                        color: $white;
+                                        box-shadow: none;
+
+                                        &::after {
+                                            width: 12px;
+                                            height: 12px;
+                                            background-size: cover;
+                                            filter: invert(1);
+
+                                        }
+
+                                        &:focus {
+                                            outline: none;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+
+                                .accordion-collapse {
+                                    .accordion-body {
+                                        color: $white;
+                                        padding: 0;
+                                        padding-top: 12px;
+
+                                        ul {
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 10px;
+
+                                            li {
+                                                a {
+                                                    font-family: RF Dewi_Light;
+                                                    font-size: 14px;
+                                                    font-weight: 400;
+                                                    line-height: 16.8px;
+                                                    text-align: left;
+                                                    display: inline-block;
+                                                    color: $white;
+
+                                                    .list {
+                                                        display: flex;
+                                                        gap: 10px;
+
+                                                        .icon {
+                                                            flex-shrink: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .map_parent {
+                    .map {
+                        overflow: hidden;
+
+                        iframe {
+                            border: 1px solid $border_color;
+                            border-radius: 20px;
+                            height: 245px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 138.83px;
+            height: 370.43px;
+            top: -286.19px;
+            left: -64.58px;
+            background-color: $design_color;
+            border-radius: 0px 0px 150px 150px;
+            opacity: 0.1;
+            z-index: -1;
+            transform: rotate(-31deg);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 138.83px;
+            height: 410.21px;
+            top: -207.44px;
+            left: -180px;
+            background-color: $design_color;
+            border-radius: 0px 0px 150px 150px;
+            opacity: 0.1;
+            z-index: -1;
+            transform: rotate(-31deg);
+        }
+    }
+
+    .footer_bottom {
+        display: flex;
+        align-items: center;
+
+        .left {
+            flex-shrink: 0;
+            width: 180px;
+
+            .footer_logo {
+                overflow: hidden;
+                height: 64.44px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .right {
+            width: calc(100% - 179.61px);
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+
+                li {
+                    font-family: RF Dewi_Light;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    letter-spacing: 0.01em;
+                    color: $white;
+                    position: relative;
+
+                    a {
+                        font-family: RF Dewi_Light;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 28px;
+                        letter-spacing: 0.01em;
+                        color: $white;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 1px;
+                            background-color: $border_color;
+                            transition: all 0.3s ease;
+                            left: 0;
+                            bottom: -5px;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        height: 70%;
+                        margin-top: 5px;
+                        right: -6px;
+                        background-color: $border_color;
+                        position: absolute;
+                        display: inline-block;
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .footer {
+        .parent_footer {
+            margin-bottom: 55px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    .accordion-header {
+                                        .accordion-button {}
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .map_parent {
+                        .map {
+                            iframe {}
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -26px;
+                }
+            }
+
+            &::after {}
+
+            &::before {}
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 160px;
+
+                .footer_logo {
+                    height: 57.28px;
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 160px);
+
+                ul {
+
+                    li {
+
+                        a {}
+
+                        &::after {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .footer {
+        padding: 50px 0px 10px 0;
+
+        .parent_footer {
+            margin-bottom: 50px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+                        width: 70%;
+
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    .accordion-header {
+                                        .accordion-button {}
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .map_parent {
+                        width: 70%;
+
+                        .map {
+                            iframe {}
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -30px;
+                }
+            }
+
+            &::after {
+                left: 14.42px;
+            }
+
+            &::before {
+                left: -100px;
+            }
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 160px;
+
+                .footer_logo {
+                    height: 57.28px;
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 160px);
+
+                ul {
+
+                    li {
+
+                        a {}
+
+                        &::after {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .footer {
+        padding: 40px 0px 10px 0;
+
+        .parent_footer {
+            margin-bottom: 40px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 15px;
+                        }
+
+                        ul {
+                            li {
+                                margin-bottom: 10px;
+
+                                a {
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+
+
+                        h3 {
+                            margin-bottom: 15px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    .accordion-header {
+                                        .accordion-button {}
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {}
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .map_parent {
+
+                        // width: 70%;
+                        .map {
+                            iframe {}
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -30px;
+                }
+            }
+
+            &::after {
+                left: 14.42px;
+            }
+
+            &::before {
+                left: -100px;
+            }
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 140px;
+
+                .footer_logo {
+                    height: 50.11px;
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 140px);
+
+                ul {
+
+                    li {
+
+                        a {}
+
+                        &::after {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .footer {
+        padding: 30px 0px 10px 0;
+
+        .parent_footer {
+            margin-bottom: 30px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                        }
+
+                        ul {
+                            li {
+                                margin-bottom: 8px;
+
+                                a {
+                                    font-size: 13px;
+
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    .accordion-header {
+                                        .accordion-button {
+                                            font-size: 13px;
+                                        }
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {
+                                                        font-size: 13px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .map_parent {
+
+                        // width: 70%;
+                        .map {
+                            iframe {}
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -18px;
+                }
+            }
+
+            &::after {
+                top: -290.16px;
+                left: 0px;
+                width: 83.07px;
+
+            }
+
+            &::before {
+                top: -248.62px;
+                left: -68px;
+                width: 83.07px;
+            }
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 120px;
+
+                .footer_logo {
+                    height: 42.95px;
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 120px);
+
+                ul {
+
+                    li {
+
+                        font-size: 14px;
+
+                        a {
+                            font-size: 14px;
+                        }
+
+                        &::after {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .footer {
+        padding: 20px 0px 10px 0;
+
+        .parent_footer {
+            margin-bottom: 20px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 14px;
+                        }
+
+                        ul {
+                            li {
+                                margin-bottom: 8px;
+
+                                a {
+                                    font-size: 13px;
+                                    line-height: 24px;
+
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 14px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    border-radius: 5px;
+
+                                    .accordion-header {
+                                        .accordion-button {
+                                            font-size: 13px;
+                                            line-height: 24px;
+                                        }
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {
+                                                        font-size: 13px;
+                                                        line-height: 24px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .map_parent {
+                        .map {
+                            iframe {
+                                border-radius: 10px;
+
+                            }
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -14px;
+                }
+            }
+
+            &::after {
+                left: -22.58px;
+                width: 83.07px;
+
+            }
+
+            &::before {
+                left: -100px;
+                top: -261.44px;
+                width: 83.07px;
+
+            }
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 80px;
+
+                .footer_logo {
+                    height: 28.64px;
+                }
+
+            }
+
+            .right {
+                width: calc(100% - 80px);
+
+                ul {
+                    column-gap: 10px;
+                    row-gap: 0;
+                    flex-wrap: wrap;
+
+                    li {
+                        &:first-child {
+                            display: none;
+                        }
+
+                        font-size: 11px;
+
+                        a {
+                            font-size: 11px;
+                        }
+
+                        &::after {
+                            height: 50%;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .footer {
+        padding: 15px 0px 10px 0;
+
+        .parent_footer {
+            margin-bottom: 15px;
+
+            .inner_footer {
+                .inner_left_parent_footer {
+                    .inner_left_inner_parent_footer {
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 13px;
+                        }
+
+                        ul {
+                            li {
+                                margin-bottom: 8px;
+
+                                a {
+                                    font-size: 12px;
+                                    line-height: 22px;
+
+                                    .icon {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_right_parent_footer {
+                    .accordian_parent {
+
+                        h3 {
+                            margin-bottom: 10px;
+                            font-size: 13px;
+                        }
+
+                        .accordian_inner_parent {
+                            .accordion {
+
+                                .accordion-item {
+                                    border-radius: 5px;
+
+                                    .accordion-header {
+                                        .accordion-button {
+                                            font-size: 12px;
+                                            line-height: 22px;
+                                        }
+                                    }
+
+                                    .accordion-collapse {
+                                        .accordion-body {
+                                            ul {
+                                                li {
+                                                    a {
+                                                        font-size: 12px;
+                                                        line-height: 22px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .map_parent {
+                        .map {
+                            iframe {
+                                border-radius: 8px;
+
+                            }
+                        }
+                    }
+
+                }
+
+                &::after {
+                    bottom: -12px;
+                }
+            }
+
+            &::after {
+                left: -44.58px;
+                width: 60.07px;
+                top: -305.19px;
+
+            }
+
+            &::before {
+                left: -100px;
+                top: -290.44px;
+                width: 60.07px;
+
+            }
+        }
+
+        .footer_bottom {
+
+            .left {
+                width: 80px;
+                display: none;
+
+                .footer_logo {
+                    height: 28.64px;
+                }
+
+            }
+
+            .right {
+                width: 100%;
+
+                ul {
+                    justify-content: center;
+                    column-gap: 10px;
+                    row-gap: 0;
+
+                    li {
+                        &:first-child {
+                            display: none;
+                        }
+
+                        font-size: 11px;
+
+                        a {
+                            font-size: 11px;
+                        }
+
+                        &::after {
+                            height: 50%;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
