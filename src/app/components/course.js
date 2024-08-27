@@ -17,7 +17,7 @@ const Course = () => {
     const [filterShow, setFilterShow] = useState(false)
     const [chips, setChips] = useState([])
     const [productData, setProductData] = useState([])
-    const [limit, setLimit] = useState('09')
+
 
     const addChip = (e) => {
         let value = e.target.value;
@@ -62,12 +62,19 @@ const Course = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(`https://dummyjson.com/products?limit=${limit}`);
-            console.log(res.data.limit)
-            setProductData(res.data.products)
+            try {
+                const res = await axios.get(`https://fakestoreapi.com/products`);
+                if (res.status === 200) {
+                    console.log(res.data)
+                    let data = res.data
+                    setProductData(data)
+                }
+            } catch (error) {
+                console.log(error)
+            }
         }
         fetchData()
-    }, [limit])
+    }, [])
 
     return (
         <section className="course">
@@ -76,14 +83,14 @@ const Course = () => {
                     <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12}>
                         <div className="parent_course">
                             <SearchBar show={filterShow} setFilterShow={setFilterShow} />
-                            <Filter_Result setLimit={setLimit}/>
+                            <Filter_Result />
                             <Chips chips={chips} setChips={setChips} removeChip={(index) => removeChip(index)} />
                             <Category_Selector />
                             <div className="main_card_parent">
                                 <Suspense fallback={<Loader />}>
                                     {
                                         productData.map((product, index) => (
-                                            <Card key={index} title={product.title} desc={product.description} images={product.images} />
+                                            <Card key={index} title={product.title} desc={product.description} />
                                         ))
                                     }
                                 </Suspense>

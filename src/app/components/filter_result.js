@@ -10,7 +10,7 @@ const Filter_Result = (props) => {
             </div>
             <div className="right_area">
                 <div className="select_wrapper">
-                    <Form.Select aria-label="Default select example" defaultValue={'09'} onChange={(e)=> props.setLimit(e.target.value)} >
+                    <Form.Select aria-label="Default select example" defaultValue={'09'}  >
                         <option value="01">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>

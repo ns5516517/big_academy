@@ -146,6 +146,9 @@
                         line-height: 21.6px;
                         color: $text_color;
                         word-break: break-word;
+                        &::selection{
+                            background-color: rgba(254, 165, 165, 0.641);
+                        }
                     }
                 }
 
