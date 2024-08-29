@@ -16,7 +16,7 @@ import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/
 import Link from 'next/link';
 
 
-const page = () => {
+const Page = () => {
 
     const top_list_data = [
         { src: image1, name: 'UAE' },
@@ -254,4 +254,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
