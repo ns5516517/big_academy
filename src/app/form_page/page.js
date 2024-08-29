@@ -15,8 +15,7 @@ import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 
-
-const Page = () => {
+const Page = () => {  // Updated to uppercase "Page"
 
     const top_list_data = [
         { src: image1, name: 'UAE' },
@@ -90,168 +89,168 @@ const Page = () => {
         subject: '',
         desc: ''
     });
+    
     const [active, setActive] = useState(0);
 
     function handleActive(index) {
         setActive(index)
     }
+    
     return (
-        <>
-            <section className="main_form">
-                <Container>
-                    <Row>
-                        <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12} >
-                            <div className="parent_form">
-                                <div className="form_top">
-                                    <div className="inner_form_top">
-                                        <h3> Head Office Details</h3>
-                                        <div className="list">
-                                            <ul>
-                                                {
-                                                    top_list_data.map((item, index) => (
-                                                        <li className={active === index ? 'active' : 'unactive'} key={index} onClick={() => handleActive(index)}>
-                                                            <div className="image">
-                                                                <Image src={item.src} alt='image1' title='...' priority={false} />
-                                                            </div>
-                                                            <p>{item.name}</p>
-                                                        </li>
-                                                    ))
-                                                }
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="inner_form_bottom">
-                                        <ul className='bottom_list'>
+        <section className="main_form">
+            <Container>
+                <Row>
+                    <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12} >
+                        <div className="parent_form">
+                            <div className="form_top">
+                                <div className="inner_form_top">
+                                    <h3> Head Office Details</h3>
+                                    <div className="list">
+                                        <ul>
                                             {
-                                                bottom_list_data.map((item, index) => (
-                                                    <li key={index}>
-                                                        <div className="left">
-                                                            <div className="icon">{item.icon}</div>
+                                                top_list_data.map((item, index) => (
+                                                    <li className={active === index ? 'active' : 'unactive'} key={index} onClick={() => handleActive(index)}>
+                                                        <div className="image">
+                                                            <Image src={item.src} alt='image1' title='...' priority={false} />
                                                         </div>
-                                                        <div className="right">
-                                                            <p className="email_title">{item.title}</p>
-                                                            <p >{item.desc}</p>
-                                                        </div>
+                                                        <p>{item.name}</p>
                                                     </li>
                                                 ))
                                             }
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="form_bottom">
-                                    <div className="form_bottom_inner">
-                                        <div className="form_left">
-                                            <ul className="form_left_list" >
+                                <div className="inner_form_bottom">
+                                    <ul className='bottom_list'>
+                                        {
+                                            bottom_list_data.map((item, index) => (
+                                                <li key={index}>
+                                                    <div className="left">
+                                                        <div className="icon">{item.icon}</div>
+                                                    </div>
+                                                    <div className="right">
+                                                        <p className="email_title">{item.title}</p>
+                                                        <p>{item.desc}</p>
+                                                    </div>
+                                                </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="form_bottom">
+                                <div className="form_bottom_inner">
+                                    <div className="form_left">
+                                        <ul className="form_left_list" >
+                                            {
+                                                main_form_data.map((item, index) => (
+                                                    <li key={index}>
+                                                        <div className="list_item">
+                                                            <h3>{item.title}</h3>
+                                                            <ul className="inner_list">
+                                                                {
+                                                                    item.inner_list.map((ele, i) => (
+                                                                        <li key={i}>
+                                                                            <div className="list_item_left">
+                                                                                <div className="icon">{ele.icon}</div>
+                                                                            </div>
+                                                                            <div className="list_item_right">
+                                                                                <p>{ele.desc}</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    ))
+                                                                }
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                ))
+                                            }
+                                        </ul>
+                                        <div className="form_left_bottom">
+                                            <p>Follow Us</p>
+                                            <ul className="social_media">
                                                 {
-                                                    main_form_data.map((item, index) => (
+                                                    social_media.map((item, index) => (
                                                         <li key={index}>
-                                                            <div className="list_item">
-                                                                <h3>{item.title}</h3>
-                                                                <ul className="inner_list">
-                                                                    {
-                                                                        item.inner_list.map((ele, i) => (
-                                                                            <li key={i}>
-                                                                                <div className="list_item_left">
-                                                                                    <div className="icon">{ele.icon}</div>
-                                                                                </div>
-                                                                                <div className="list_item_right">
-                                                                                    <p>{ele.desc}</p>
-                                                                                </div>
-                                                                            </li>
-                                                                        ))
-                                                                    }
-                                                                </ul>
-                                                            </div>
+                                                            <Link href='/' className="icon">{item.icon}</Link>
                                                         </li>
                                                     ))
                                                 }
                                             </ul>
-                                            <div className="form_left_bottom">
-                                                <p>Follow Us</p>
-                                                <ul className="social_media">
-                                                    {
-                                                        social_media.map((item, index) => (
-                                                            <li key={index}>
-                                                                <Link href='/' className="icon">{item.icon}</Link>
-                                                            </li>
-                                                        ))
-                                                    }
-                                                </ul>
-                                            </div>
                                         </div>
-                                        <div className="form_right">
-                                            <div className="main_inner_form_right">
-                                                <div className="form_title">
-                                                    <h3>Get in Touch with us</h3>
-                                                    <p>Submit your queries to us for more Information</p>
-                                                </div>
-                                                <Form className='form'>
-                                                    <div className="form_field">
-                                                        <Form.Group className='form-group'>
-                                                            <Form.Label>Name <span>*</span></Form.Label>
-                                                            <Form.Control
-                                                                type="text"
-                                                                placeholder="Enter Name"
-                                                                name='full_name'
-                                                                value={user_data.name}
-                                                                onChange={(e) => setUser_Data({ ...user_data, name: e.target.value })}
-                                                            />
-                                                        </Form.Group>
-                                                        <Form.Group className='form-group'>
-                                                            <Form.Label>Email <span>*</span> </Form.Label>
-                                                            <Form.Control
-                                                                type="email"
-                                                                placeholder="Enter email"
-                                                                name='email'
-                                                                value={user_data.email}
-                                                                onChange={(e) => setUser_Data({ ...user_data, email: e.target.value })}
-                                                            />
-                                                        </Form.Group>
-                                                        <Form.Group className='form-group'>
-                                                            <Form.Label>Contact Number <span>*</span></Form.Label>
-                                                            <Form.Control
-                                                                type="text"
-                                                                placeholder="Enter Number"
-                                                                name='contact_no'
-                                                                value={user_data.contact}
-                                                                onChange={(e) => setUser_Data({ ...user_data, contact: e.target.value })}
-                                                            />
-                                                        </Form.Group>
-                                                        <Form.Group className='form-group'>
-                                                            <Form.Label>Subject <span>*</span></Form.Label>
-                                                            <Form.Control
-                                                                type="text"
-                                                                placeholder="Enter Subject"
-                                                                name='subject'
-                                                                value={user_data.subject}
-                                                                onChange={(e) => setUser_Data({ ...user_data, subject: e.target.value })}
-                                                            />
-                                                        </Form.Group>
-                                                        <Form.Group className='form-group'>
-                                                            <Form.Label>Message <span>*</span></Form.Label>
-                                                            <Form.Control
-                                                                as="textarea"
-                                                                placeholder="Enter Message"
-                                                                className='textarea'
-                                                                name='desc'
-                                                                value={user_data.desc}
-                                                                onChange={(e) => setUser_Data({ ...user_data, desc: e.target.value })}
-                                                            />
-                                                        </Form.Group>
-                                                    </div>
-                                                    <Button className='btn-primary' type='submit' >Send Message</Button>
-                                                </Form>
+                                    </div>
+                                    <div className="form_right">
+                                        <div className="main_inner_form_right">
+                                            <div className="form_title">
+                                                <h3>Get in Touch with us</h3>
+                                                <p>Submit your queries to us for more Information</p>
                                             </div>
+                                            <Form className='form'>
+                                                <div className="form_field">
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Name <span>*</span></Form.Label>
+                                                        <Form.Control
+                                                            type="text"
+                                                            placeholder="Enter Name"
+                                                            name='full_name'
+                                                            value={user_data.name}
+                                                            onChange={(e) => setUser_Data({ ...user_data, name: e.target.value })}
+                                                        />
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Email <span>*</span> </Form.Label>
+                                                        <Form.Control
+                                                            type="email"
+                                                            placeholder="Enter email"
+                                                            name='email'
+                                                            value={user_data.email}
+                                                            onChange={(e) => setUser_Data({ ...user_data, email: e.target.value })}
+                                                        />
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Contact Number <span>*</span></Form.Label>
+                                                        <Form.Control
+                                                            type="text"
+                                                            placeholder="Enter Number"
+                                                            name='contact_no'
+                                                            value={user_data.contact}
+                                                            onChange={(e) => setUser_Data({ ...user_data, contact: e.target.value })}
+                                                        />
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Subject <span>*</span></Form.Label>
+                                                        <Form.Control
+                                                            type="text"
+                                                            placeholder="Enter Subject"
+                                                            name='subject'
+                                                            value={user_data.subject}
+                                                            onChange={(e) => setUser_Data({ ...user_data, subject: e.target.value })}
+                                                        />
+                                                    </Form.Group>
+                                                    <Form.Group className='form-group'>
+                                                        <Form.Label>Message <span>*</span></Form.Label>
+                                                        <Form.Control
+                                                            as="textarea"
+                                                            placeholder="Enter Message"
+                                                            className='textarea'
+                                                            name='desc'
+                                                            value={user_data.desc}
+                                                            onChange={(e) => setUser_Data({ ...user_data, desc: e.target.value })}
+                                                        />
+                                                    </Form.Group>
+                                                </div>
+                                                <Button className='btn-primary' type='submit' >Send Message</Button>
+                                            </Form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
-        </>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
     )
 }
 
-export default Page
+export default Page;  // Updated to export "Page" instead of "page"
