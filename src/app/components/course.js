@@ -63,12 +63,13 @@ const Course = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://fakestoreapi.com/products`);
+                const res = await axios.get(`https://dummyjson.com/products/?limit=9`);
                 if (res.status === 200) {
                     console.log(res.data)
-                    let data = res.data
+                    let data = res.data.products
                     setProductData(data)
                 }
+                // console.log(productData)
             } catch (error) {
                 console.log(error)
             }
@@ -89,9 +90,11 @@ const Course = () => {
                             <div className="main_card_parent">
                                 <Suspense fallback={<Loader />}>
                                     {
-                                        productData.map((product, index) => (
-                                            <Card key={index} title={product.title} desc={product.description} />
-                                        ))
+                                        productData.map((product, index) => {
+                                            // console.log(product.title)
+                                            return <Card key={index} title={product.title} desc={product.description} images={product.images} />
+                                        })
+
                                     }
                                 </Suspense>
                             </div>

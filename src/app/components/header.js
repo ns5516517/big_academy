@@ -53,7 +53,7 @@ const Header = () => {
                                             </Dropdown.Menu>
                                         </Dropdown></Link></li>
                                         <li><Link href='/'>Find Study Center</Link></li>
-                                        <li><Link href='/'>Partner with us</Link></li>
+                                        <li><Link href='/form_page'>Partner with us</Link></li>
                                         <li><Link href='/'>About Us</Link></li>
                                     </ul>
                                 </div>
@@ -95,7 +95,7 @@ const Header = () => {
                                 </Dropdown.Menu>
                             </Dropdown></Link></li>
                             <li><Link href='/'>Find Study Center</Link></li>
-                            <li><Link href='/'>Partner with us</Link></li>
+                            <li><Link href='/form_page'>Partner with us</Link></li>
                             <li><Link href='/'>About Us</Link></li>
                         </ul>
                     </div>

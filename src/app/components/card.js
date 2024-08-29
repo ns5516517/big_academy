@@ -8,13 +8,12 @@ import '../../../public/sass/pages/card.scss';
 import Link from 'next/link';
 
 const Card = (props) => {
-    // console.log(props.images[0])
     return (
         <>
             <div className="card_parent">
                 <div className="left">
                     <div className="card_image">
-                        <Image src={image1} alt='image1' title='...' priority={false}/>
+                    <Image src={image1} alt='image1' title='...' priority={false} />
                     </div>
                 </div>
                 <div className="right">

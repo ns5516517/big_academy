@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import { Montserrat } from "next/font/google";
+import { Montserrat, Space_Grotesk } from "next/font/google";
+// import "./globals.css";
 import '../../public/sass/helper/global.scss';
 import '../../public/sass/helper/helper.scss';
 import '../../public/sass/helper/base.scss';
@@ -7,8 +8,15 @@ import '../../public/sass/helper/reset.scss';
 import Header from "./components/header";
 import Footer from "./components/footer";
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Banner from './components/banner';
 
 const montserrat = Montserrat({ subsets: ["latin"], weight:['100','200','300','400','500','600','700','800','900'] });
+
+export const space = Space_Grotesk({
+  subsets:['latin'],
+  weight:['300','400','500','600','700'],
+  variable: '--space'
+}) 
 
 export const metadata = {
   title: "Create Next App",
@@ -19,7 +27,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" /></head>
-      <body id='pb_scroll' className={montserrat.className}><Header />{children}<Footer /></body>
+
+    <body id='pb_scroll' className={`${montserrat.className} ${space.variable}`}><Header /> <Banner /> {children}<Footer /></body>
     </html>
   );
 }

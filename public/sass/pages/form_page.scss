@@ -1,0 +1,412 @@
+@import '../base/variable.scss';
+@import '../base/mixins.scss';
+
+.main_form {
+    .parent_form {
+        .form_top {
+            border: 1px solid $border_color;
+            border-radius: 10px;
+            padding: 46px 71px;
+            width: 1200px;
+            margin: auto;
+            max-width: 100%;
+            position: relative;
+            background-color: $white;
+            // z-index: 100;
+
+            .inner_form_top {
+                margin-bottom: 54px;
+
+                h3 {
+                    position: absolute;
+                    top: -23px;
+                    left: 66px;
+                    padding: 0 30px;
+                    display: inline-block;
+                    background-color: $white;
+                    font-family: RF Dewi;
+                    font-size: 23px;
+                    font-weight: 700;
+                    line-height: 40.25px;
+                    text-align: left;
+                    margin-bottom: 0;
+                    color: $contact_text_color;
+                }
+
+                .list {
+                    width: 1100px;
+                    max-width: 100%;
+                    margin: auto;
+
+                    ul {
+                        display: flex;
+                        gap: 40px;
+
+                        li {
+                            width: calc((100% - 240px) / 7);
+                            border: 1px solid transparent;
+                            padding: 9px 18px;
+                            border-radius: 10px;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+
+                            .image {
+                                height: 40px;
+                                width: 40px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                margin: 0 auto 12px auto;
+                                transition: all 0.3s ease;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+
+                                }
+                            }
+
+                            p {
+                                text-align: center;
+                                font-family: RF Dewi;
+                                font-size: 14px;
+                                font-weight: 600;
+                                line-height: 24.5px;
+                                color: $contact_text_color;
+                                transition: all 0.3s ease;
+                            }
+
+                            &:hover {
+                                border: 1px solid $border_color;
+
+                                .image {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+
+                                p {
+                                    color: $red;
+                                }
+                            }
+
+                            &.active {
+                                border: 1px solid $border_color;
+
+                                .image {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+
+                                p {
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .inner_form_bottom {
+                .bottom_list {
+                    display: flex;
+                    gap: 50px;
+
+                    li {
+                        border: 1px solid $border_color;
+                        border-radius: 10px;
+                        padding: 21px;
+                        width: calc((100% - 100px) / 3);
+                        position: relative;
+                        transition: all 0.3s ease;
+                        overflow: hidden;
+                        z-index: 2;
+                        @include clearfix();
+
+                        .left {
+                            width: 30px;
+                            float: left;
+                            margin-right: 10px;
+
+                            .icon {
+                                font-size: 30px;
+                                color: $red;
+                                transition: all 0.3s ease;
+                            }
+                        }
+
+                        .right {
+                            width: calc(100% - 40px);
+                            float: right;
+
+                            p {
+                                font-family: RF Dewi;
+                                text-align: left;
+                                color: $contact_text_color;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 27px;
+                                transition: all 0.3s ease;
+
+                                &.email_title {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    line-height: 28px;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: $red;
+                            z-index: -1;
+                            transition: all 0.3s ease;
+                        }
+
+                        &:hover {
+                            border: 1px solid $red;
+
+                            &::after {
+                                height: 100%;
+                            }
+
+                            .left {
+                                .icon {
+                                    color: $white;
+                                }
+                            }
+
+                            .right {
+                                p {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form_bottom {
+            border: 1px solid $third_border_color;
+            padding: 137px 53px 39px 53px;
+            background-color: $form_bg;
+            border-radius: 10px;
+            margin-top: -91px;
+
+            .form_bottom_inner {
+                display: flex;
+                @include clearfix();
+
+                .form_left {
+                    padding: 43px 90px 43px 23px;
+                    float: left;
+                    width: 423px;
+                    background-color: #EFEFEF;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .form_left_list {
+
+                        li {
+                            border-radius: 10px;
+                            background-color: $white;
+                            padding: 15px;
+                            border: 1px solid $sec_border_color;
+                            margin-bottom: 23px;
+
+                            .list_item {
+                                h3 {
+                                    font-family: RF Dewi;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    line-height: 35px;
+                                    text-align: left;
+                                    margin-bottom: 18px;
+                                }
+
+                                .inner_list {
+                                    li {
+                                        border: none;
+                                        padding: 0;
+                                        margin-bottom: 15px;
+                                        @include clearfix();
+
+                                        .list_item_left {
+                                            float: left;
+                                            width: 20px;
+
+                                            .icon {
+                                                font-size: 16px;
+                                                line-height: 21px;
+                                                color: $red;
+                                            }
+                                        }
+
+                                        .list_item_right {
+                                            float: right;
+                                            width: calc(100% - 20px);
+                                            padding-left: 20px;
+
+                                            p {
+                                                font-family: RF Dewi;
+                                                font-size: 18px;
+                                                font-weight: 400;
+                                                line-height: 21.6px;
+                                                text-align: left;
+                                                color: $contact_text_color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .form_left_bottom {
+                        p {
+                            font-family: RF Dewi;
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 35px;
+                            text-align: left;
+                            color: $contact_text_color;
+                        }
+
+                        .social_media {
+                            li {
+                                display: inline-block;
+                                margin-right: 15px;
+
+                                .icon {
+                                    display: inline-block;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    width: 45px;
+                                    height: 45px;
+                                    line-height: 45px;
+                                    background-color: #9D9D9D;
+                                    color: #EFEFEF;
+                                    font-size: 20px;
+                                    transition: all 0.3s ease;
+
+                                    &:hover {
+                                        background-color: $red;
+                                        color: $white;
+                                    }
+                                }
+
+                                &:last-child {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .form_right {
+                    float: right;
+                    width: calc(100% - 423px);
+
+                    .main_inner_form_right {
+                        background-color: $white;
+                        padding: 42px 82px 77px 82px;
+                        margin-left: -50px;
+                        box-shadow: 0px 4px 37px 0px #AAD0D980;
+                        border-radius: 10px;
+                        border-radius: 1px solid $sec_border_color;
+
+                        .form_title {
+                            text-align: center;
+                            margin-bottom: 75px;
+
+                            h3 {
+                                font-family: RF Dewi;
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 35px;
+                                color: $contact_text_color;
+                                margin-bottom: 0;
+                            }
+
+                            p {
+                                color: $text_color;
+                                font-family: RF Dewi;
+                                font-size: 16px;
+                                font-weight: 600;
+                                line-height: 28px;
+
+                            }
+                        }
+
+                        .form {
+                            .form_field {
+                                margin-bottom: 60px;
+
+                                .form-group {
+                                    margin-bottom: 40px;
+
+                                    .form-label {
+                                        margin-bottom: 17px;
+                                        font-family: var(--space);
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        line-height: 28px;
+                                        text-align: left;
+
+                                        span {
+                                            color: $another_red;
+                                        }
+                                    }
+
+                                    .form-control {
+                                        font-family: var(--space);
+                                        font-size: 18px;
+                                        font-weight: 400;
+                                        line-height: 22.97px;
+                                        text-align: left;
+                                        outline: none;
+                                        color: $input_color;
+                                        border: none;
+                                        border-bottom: 2px solid $sec_border_color;
+
+                                        &:focus {
+                                            box-shadow: none;
+                                            outline: none;
+                                        }
+
+                                        &.textarea {
+                                            height: 37px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .btn-primary {
+                                font-size: 20px;
+                                font-weight: 500;
+                                line-height: 24.38px;
+                                background-color: $red;
+                                padding: 13px 39px;
+                                color: $white;
+                                margin: auto;
+                                border-radius: 10px;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
