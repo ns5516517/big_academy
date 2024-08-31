@@ -280,6 +280,7 @@
                             font-weight: 700;
                             line-height: 35px;
                             text-align: left;
+                            margin-bottom: 20px;
                             color: $contact_text_color;
                         }
 
@@ -324,7 +325,7 @@
                         margin-left: -50px;
                         box-shadow: 0px 4px 37px 0px #AAD0D980;
                         border-radius: 10px;
-                        border-radius: 1px solid $sec_border_color;
+                        border: 1px solid $sec_border_color;
 
                         .form_title {
                             text-align: center;
@@ -355,6 +356,10 @@
 
                                 .form-group {
                                     margin-bottom: 40px;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
 
                                     .form-label {
                                         margin-bottom: 17px;
@@ -410,3 +415,1437 @@
         }
     }
 }
+
+
+
+
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .main_form {
+        margin-bottom: 64px;
+
+        .parent_form {
+            .form_top {
+                padding: 42px 65px;
+                width: 1000px;
+
+                .inner_form_top {
+                    margin-bottom: 44px;
+
+                    h3 {
+                        padding: 0 25px;
+                    }
+
+                    .list {
+                        width: 810px;
+
+                        ul {
+                            gap: 30px;
+
+                            li {
+                                width: calc((100% - 180px) / 7);
+                                padding: 9px;
+                                border-radius: 8px;
+
+                                .image {
+                                    height: 30px;
+                                    width: 30px;
+                                    margin-bottom: 8px;
+                                }
+
+                                p {}
+
+                                &:hover {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        gap: 40px;
+
+                        li {
+                            width: calc((100% - 80px) / 3);
+                            padding: 17px;
+
+                            .left {
+                                width: 25px;
+
+                                .icon {
+                                    font-size: 25px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 35px));
+
+                                p {
+                                    font-size: 17px;
+                                    line-height: 22px;
+
+                                    &.email_title {
+                                        line-height: 16px;
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 130px 43px 40px 43px;
+
+                .form_bottom_inner {
+
+                    .form_left {
+                        padding: 37px 85px 37px 20px;
+
+                        .form_left_list {
+
+                            li {
+                                margin-bottom: 18px;
+                                border-radius: 8px;
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 30px;
+                                        margin-bottom: 15px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 15px;
+
+                                            .list_item_left {
+
+                                                .icon {}
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 14px;
+
+                                                p {}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 15px;
+                            }
+
+                            .social_media {
+                                li {
+                                    .icon {
+                                        width: 40px;
+                                        height: 40px;
+                                        line-height: 40px;
+                                        font-size: 18px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+
+                        .main_inner_form_right {
+                            padding: 37px 70px;
+
+                            .form_title {
+                                margin-bottom: 65px;
+
+                                h3 {
+                                    line-height: 30px;
+                                }
+
+                                p {}
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 50px;
+
+                                    .form-group {
+                                        margin-bottom: 35px;
+
+                                        .form-label {
+                                            line-height: 23px;
+                                            margin-bottom: 12px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 17px;
+                                            line-height: 21px;
+                                            border-bottom-width: 1px;
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 18px;
+                                    padding: 12px 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main_form {
+        margin-bottom: 58px;
+
+        .parent_form {
+            .form_top {
+                padding: 35px 50px;
+                ;
+                width: 1000px;
+
+                .inner_form_top {
+                    margin-bottom: 38px;
+
+                    h3 {
+                        padding: 0 21px;
+                        font-size: 22px;
+                    }
+
+                    .list {
+                        width: 850px;
+
+                        ul {
+                            gap: 20px;
+
+                            li {
+                                width: calc((100% - 120px) / 7);
+                                padding: 9px;
+                                border-radius: 8px;
+
+                                .image {
+                                    height: 30px;
+                                    width: 30px;
+                                    margin-bottom: 8px;
+                                }
+
+                                p {}
+
+                                &:hover {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        gap: 35px;
+
+                        li {
+                            width: calc((100% - 70px) / 3);
+                            padding: 15px;
+
+                            .left {
+                                width: 25px;
+
+                                .icon {
+                                    font-size: 25px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 35px));
+
+                                p {
+                                    font-size: 17px;
+                                    line-height: 22px;
+
+                                    &.email_title {
+                                        line-height: 24px;
+                                        margin-bottom: 7px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 117px 36px 36px 36px;
+                margin-top: -80px;
+
+                .form_bottom_inner {
+
+                    .form_left {
+                        padding: 35px 75px 35px 20px;
+
+                        .form_left_list {
+
+                            li {
+                                margin-bottom: 15px;
+                                border-radius: 8px;
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 30px;
+                                        margin-bottom: 11px;
+                                        font-size: 19px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 11px;
+
+                                            .list_item_left {
+
+                                                .icon {}
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 14px;
+
+                                                p {
+                                                    font-size: 17px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 11px;
+                            }
+
+                            .social_media {
+                                li {
+                                    .icon {
+                                        width: 35px;
+                                        height: 35px;
+                                        line-height: 35px;
+                                        font-size: 17px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+
+                        .main_inner_form_right {
+                            padding: 35px 55px;
+
+                            .form_title {
+                                margin-bottom: 45px;
+
+                                h3 {
+                                    font-size: 19px;
+                                    line-height: 30px;
+                                }
+
+                                p {}
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 40px;
+
+                                    .form-group {
+                                        margin-bottom: 30px;
+
+                                        .form-label {
+                                            line-height: 22px;
+                                            margin-bottom: 11px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 16px;
+                                            line-height: 20px;
+                                            border-bottom-width: 1px;
+                                            height: 35px;
+
+                                            &.textarea {
+                                                height: 35px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 17px;
+                                    padding: 11px 33px;
+                                    border-radius: 7px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .main_form {
+        margin-bottom: 50px;
+
+        .parent_form {
+            .form_top {
+                padding: 25px 30px;
+                width: 1000px;
+
+                .inner_form_top {
+                    margin-bottom: 28px;
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        padding-top: 10px;
+
+                    }
+
+                    h3 {
+                        padding: 0 16px;
+                        font-size: 20px;
+                        left: 47px;
+                    }
+
+                    .list {
+                        min-width: 850px;
+
+                        ul {
+                            gap: 20px;
+
+                            li {
+                                width: calc((100% - 120px) / 7);
+                                padding: 9px;
+                                border-radius: 8px;
+
+                                .image {
+                                    height: 30px;
+                                    width: 30px;
+                                    margin-bottom: 8px;
+                                }
+
+                                p {}
+
+                                &:hover {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        row-gap: 20px;
+                        column-gap: 30px;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: calc((100% - 30px) / 2);
+                            padding: 15px;
+
+                            .left {
+                                width: 25px;
+
+                                .icon {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 35px));
+
+                                p {
+                                    font-size: 14px;
+                                    line-height: 19px;
+
+                                    &.email_title {
+                                        line-height: 24px;
+                                        margin-bottom: 7px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 100px 25px 25px 25px;
+                margin-top: -80px;
+
+                .form_bottom_inner {
+                    flex-direction: column-reverse;
+
+                    .form_left {
+                        padding: 25px 40px;
+                        width: 100%;
+
+                        .form_left_list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            column-gap: 15px;
+
+                            li {
+                                margin-bottom: 15px;
+                                border-radius: 7px;
+                                padding: 13px;
+                                width: calc((100% - 15px) / 2);
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 28px;
+                                        margin-bottom: 10px;
+                                        font-size: 17px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 10px;
+                                            width: 100%;
+
+                                            .list_item_left {
+
+                                                .icon {}
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 10px;
+
+                                                p {
+                                                    font-size: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 10px;
+                                font-size: 17px;
+                                line-height: 28px;
+                            }
+
+                            .social_media {
+                                li {
+                                    margin-right: 13px;
+
+                                    .icon {
+                                        width: 30px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        font-size: 14px;
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        .main_inner_form_right {
+                            padding: 25px 40px;
+                            margin-left: 0;
+
+                            .form_title {
+                                margin-bottom: 35px;
+
+                                h3 {
+                                    font-size: 18px;
+                                    line-height: 29px;
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                }
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 35px;
+
+                                    .form-group {
+                                        margin-bottom: 25px;
+
+                                        .form-label {
+                                            line-height: 20px;
+                                            margin-bottom: 9px;
+                                            font-size: 15px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 15px;
+                                            line-height: 20px;
+                                            border-bottom-width: 1px;
+                                            height: 35px;
+
+                                            &.textarea {
+                                                height: 35px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 16px;
+                                    padding: 10px 25px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .main_form {
+        margin-bottom: 46px;
+
+        .parent_form {
+            .form_top {
+                padding: 20px;
+                width: 1000px;
+
+                .inner_form_top {
+                    margin-bottom: 15px;
+                    overflow-x: scroll;
+                    padding-bottom: 5px;
+
+                    h3 {
+                        padding: 0 14px;
+                        font-size: 16px;
+                        left: 40px;
+                    }
+
+                    .list {
+                        min-width: 850px;
+
+                        ul {
+                            gap: 25px;
+
+                            li {
+                                width: calc((100% - 150px) / 7);
+                                padding: 9px;
+                                border-radius: 6px;
+
+                                .image {
+                                    height: 25px;
+                                    width: 25px;
+                                    margin-bottom: 8px;
+                                }
+
+                                p {}
+
+                                &:hover {
+
+                                    .image {
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        row-gap: 20px;
+                        column-gap: 20px;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: calc((100% - 20px) / 2);
+                            padding: 13px;
+
+                            .left {
+                                width: 20px;
+
+                                .icon {
+                                    font-size: 18px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 30px));
+
+                                p {
+                                    font-size: 14px;
+                                    line-height: 18px;
+
+                                    &.email_title {
+                                        line-height: 21px;
+                                        font-size: 15px;
+                                        margin-bottom: 5px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 97px 20px 20px 20px;
+                margin-top: -80px;
+
+                .form_bottom_inner {
+                    flex-direction: column-reverse;
+
+                    .form_left {
+                        padding: 20px 30px;
+                        width: 100%;
+
+                        .form_left_list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            margin-bottom: 10px;
+
+                            li {
+                                margin-bottom: 0;
+                                border-radius: 6px;
+                                padding: 12px;
+                                width: calc((100% - 10px) / 2);
+
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 24px;
+                                        margin-bottom: 8px;
+                                        font-size: 16px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 8px;
+                                            width: 100%;
+
+                                            .list_item_left {
+
+                                                .icon {
+                                                    font-size: 14px;
+                                                }
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 5px;
+
+                                                p {
+                                                    font-size: 14px;
+                                                    line-height: 18.6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 7px;
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+
+                            .social_media {
+                                li {
+                                    margin-right: 10px;
+
+                                    .icon {
+                                        width: 25px;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        font-size: 12px;
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        .main_inner_form_right {
+                            padding: 20px 30px;
+                            margin-left: 0;
+
+                            .form_title {
+                                margin-bottom: 25px;
+
+                                h3 {
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+
+                                p {
+                                    line-height: 24px;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 25px;
+
+                                    .form-group {
+                                        margin-bottom: 15px;
+
+                                        .form-label {
+                                            line-height: 20px;
+                                            margin-bottom: 8px;
+                                            font-size: 14px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                            border-bottom-width: 1px;
+                                            height: 30px;
+
+                                            &.textarea {
+                                                height: 30px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 14px;
+                                    padding: 6px 17px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .main_form {
+        margin-bottom: 30px;
+
+        .parent_form {
+            .form_top {
+                padding: 15px;
+                width: 1000px;
+                border-radius: 5px;
+
+                .inner_form_top {
+                    margin-bottom: 15px;
+                    overflow-x: scroll;
+                    padding-bottom: 5px;
+
+                    h3 {
+                        padding: 0 14px;
+                        font-size: 14px;
+                        left: 40px;
+                        top: -13px;
+                        line-height: 25.25px;
+                    }
+
+                    .list {
+                        min-width: 850px;
+
+                        ul {
+                            gap: 10px;
+
+                            li {
+                                width: calc((100% - 60px) / 7);
+                                padding: 8px;
+                                border-radius: 5px;
+
+                                .image {
+                                    height: 20px;
+                                    width: 20px;
+                                    margin-bottom: 5px;
+                                }
+
+                                p {
+                                    font-size: 13px;
+                                }
+
+                                &:hover {
+
+                                    .image {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        row-gap: 10px;
+                        column-gap: 10px;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 100%;
+                            border-radius: 5px;
+                            padding: 10px;
+
+                            .left {
+                                width: 15px;
+
+                                .icon {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 25px));
+
+                                p {
+                                    font-size: 14px;
+                                    line-height: 18px;
+
+                                    &.email_title {
+                                        line-height: 19px;
+                                        font-size: 14px;
+                                        margin-bottom: 5px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 92px 15px 15px 15px;
+                border-radius: 5px;
+                margin-top: -80px;
+
+                .form_bottom_inner {
+                    flex-direction: column-reverse;
+
+                    .form_left {
+                        padding: 15px 20px;
+                        border-radius: 5px;
+                        width: 100%;
+
+                        .form_left_list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            margin-bottom: 10px;
+
+                            li {
+                                border-radius: 5px;
+                                margin-bottom: 0;
+                                padding: 12px;
+                                width: 100%;
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 24px;
+                                        margin-bottom: 8px;
+                                        font-size: 14px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 8px;
+                                            width: 100%;
+
+                                            .list_item_left {
+
+                                                .icon {
+                                                    font-size: 13px;
+                                                }
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 5px;
+
+                                                p {
+                                                    font-size: 13px;
+                                                    line-height: 18.6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 7px;
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+
+                            .social_media {
+                                li {
+                                    margin-right: 10px;
+
+                                    .icon {
+                                        width: 25px;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        font-size: 12px;
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        .main_inner_form_right {
+                            padding: 15px 20px;
+                            margin-left: 0;
+                            border-radius: 5px;
+
+                            .form_title {
+                                margin-bottom: 20px;
+
+                                h3 {
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                }
+
+                                p {
+                                    line-height: 21px;
+                                    font-size: 13px;
+                                }
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 20px;
+
+                                    .form-group {
+                                        margin-bottom: 15px;
+
+                                        .form-label {
+                                            line-height: 14px;
+                                            margin-bottom: 8px;
+                                            font-size: 14px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                            border-bottom-width: 1px;
+                                            height: 25px;
+
+                                            &.textarea {
+                                                height: 25px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 14px;
+                                    padding: 5px 14px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .main_form {
+        margin-bottom: 30px;
+
+        .parent_form {
+            .form_top {
+                padding: 15px;
+                width: 1000px;
+                border-radius: 5px;
+
+                .inner_form_top {
+                    margin-bottom: 15px;
+                    overflow-x: scroll;
+                    padding-bottom: 5px;
+
+                    h3 {
+                        padding: 0 14px;
+                        font-size: 13px;
+                        left: 20px;
+                        top: -13px;
+                        line-height: 25.25px;
+                    }
+
+                    .list {
+                        min-width: 850px;
+
+                        ul {
+                            gap: 10px;
+
+                            li {
+                                width: calc((100% - 60px) / 7);
+                                padding: 8px;
+                                border-radius: 5px;
+
+                                .image {
+                                    height: 20px;
+                                    width: 20px;
+                                    margin-bottom: 5px;
+                                }
+
+                                p {
+                                    font-size: 13px;
+                                }
+
+                                &:hover {
+
+                                    .image {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+
+                                    p {}
+                                }
+
+                                &.active {
+
+                                    .image {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
+
+                                    p {}
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inner_form_bottom {
+                    .bottom_list {
+                        row-gap: 10px;
+                        column-gap: 10px;
+                        flex-wrap: wrap;
+
+                        li {
+                            width: 100%;
+                            border-radius: 5px;
+                            padding: 10px;
+
+                            .left {
+                                width: 10px;
+
+                                .icon {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .right {
+                                width: calc((100% - 20px));
+
+                                p {
+                                    font-size: 13px;
+                                    line-height: 18px;
+
+                                    &.email_title {
+                                        line-height: 15px;
+                                        font-size: 13px;
+                                        margin-bottom: 3px;
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .form_bottom {
+                padding: 92px 15px 15px 15px;
+                border-radius: 5px;
+                margin-top: -80px;
+
+                .form_bottom_inner {
+                    flex-direction: column-reverse;
+
+                    .form_left {
+                        padding: 15px 20px;
+                        border-radius: 5px;
+                        width: 100%;
+
+                        .form_left_list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 10px;
+                            margin-bottom: 10px;
+
+                            li {
+                                border-radius: 5px;
+                                margin-bottom: 0;
+                                padding: 12px;
+                                width: 100%;
+
+                                .list_item {
+                                    h3 {
+                                        line-height: 24px;
+                                        margin-bottom: 5px;
+                                        font-size: 13px;
+                                    }
+
+                                    .inner_list {
+                                        li {
+                                            margin-bottom: 5px;
+                                            width: 100%;
+
+                                            .list_item_left {
+
+                                                .icon {
+                                                    font-size: 13px;
+                                                }
+                                            }
+
+                                            .list_item_right {
+                                                padding-left: 5px;
+
+                                                p {
+                                                    font-size: 13px;
+                                                    line-height: 18.6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .form_left_bottom {
+                            p {
+                                margin-bottom: 7px;
+                                font-size: 13px;
+                                line-height: 24px;
+                            }
+
+                            .social_media {
+                                li {
+                                    margin-right: 10px;
+
+                                    .icon {
+                                        width: 25px;
+                                        height: 25px;
+                                        line-height: 25px;
+                                        font-size: 12px;
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .form_right {
+                        width: 100%;
+                        margin-bottom: 15px;
+
+                        .main_inner_form_right {
+                            padding: 15px 20px;
+                            margin-left: 0;
+                            border-radius: 5px;
+
+                            .form_title {
+                                margin-bottom: 20px;
+
+                                h3 {
+                                    font-size: 13px;
+                                    line-height: 22px;
+                                }
+
+                                p {
+                                    line-height: 21px;
+                                    font-size: 13px;
+                                }
+                            }
+
+                            .form {
+                                .form_field {
+                                    margin-bottom: 20px;
+
+                                    .form-group {
+                                        margin-bottom: 15px;
+
+                                        .form-label {
+                                            line-height: 13px;
+                                            margin-bottom: 8px;
+                                            font-size: 14px;
+                                        }
+
+                                        .form-control {
+                                            font-size: 13px;
+                                            line-height: 20px;
+                                            border-bottom-width: 1px;
+                                            height: 25px;
+
+                                            &.textarea {
+                                                height: 25px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-primary {
+                                    font-size: 13px;
+                                    padding: 3px 12px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

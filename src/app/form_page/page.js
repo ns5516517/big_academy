@@ -14,9 +14,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
-const Page = () => {  // Updated to uppercase "Page"
+const Page = () => {
 
+    const router = useRouter()
+    
     const top_list_data = [
         { src: image1, name: 'UAE' },
         { src: image2, name: 'Australia' },
@@ -83,19 +87,46 @@ const Page = () => {  // Updated to uppercase "Page"
     ]
 
     const [user_data, setUser_Data] = useState({
-        name: '',
-        email: '',
-        contact: '',
-        subject: '',
-        desc: ''
+        Name: '',
+        Email: '',
+        Contact: '',
+        Subject: '',
+        Message: ''
     });
-    
+
     const [active, setActive] = useState(0);
 
     function handleActive(index) {
         setActive(index)
     }
-    
+
+    async function handleSubmit(e) {
+        console.log(user_data)
+        e.preventDefault();
+        try {
+            const res = await axios.post(`https://jsonplaceholder.typicode.com/posts`, {
+                user_data
+            })
+            console.log(res)
+            console.log(res.status)
+            const result = res.data
+            console.log(result)
+            if (res.status == 201) {
+                setUser_Data({
+                    Name: '',
+                    Email: '',
+                    Contact: '',
+                    Subject: '',
+                    Message: ''
+                })
+
+                router.push(`/home?${JSON.stringify(result)}`)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <section className="main_form">
             <Container>
@@ -103,7 +134,7 @@ const Page = () => {  // Updated to uppercase "Page"
                     <Col xxl={12} xl={12} lg={12} md={12} sm={12} xs={12} >
                         <div className="parent_form">
                             <div className="form_top">
-                                <div className="inner_form_top">
+                                <div className="inner_form_top" >
                                     <h3> Head Office Details</h3>
                                     <div className="list">
                                         <ul>
@@ -185,61 +216,26 @@ const Page = () => {  // Updated to uppercase "Page"
                                                 <h3>Get in Touch with us</h3>
                                                 <p>Submit your queries to us for more Information</p>
                                             </div>
-                                            <Form className='form'>
+                                            <Form className='form' onSubmit={handleSubmit} action='/home'>
                                                 <div className="form_field">
-                                                    <Form.Group className='form-group'>
-                                                        <Form.Label>Name <span>*</span></Form.Label>
-                                                        <Form.Control
-                                                            type="text"
-                                                            placeholder="Enter Name"
-                                                            name='full_name'
-                                                            value={user_data.name}
-                                                            onChange={(e) => setUser_Data({ ...user_data, name: e.target.value })}
-                                                        />
-                                                    </Form.Group>
-                                                    <Form.Group className='form-group'>
-                                                        <Form.Label>Email <span>*</span> </Form.Label>
-                                                        <Form.Control
-                                                            type="email"
-                                                            placeholder="Enter email"
-                                                            name='email'
-                                                            value={user_data.email}
-                                                            onChange={(e) => setUser_Data({ ...user_data, email: e.target.value })}
-                                                        />
-                                                    </Form.Group>
-                                                    <Form.Group className='form-group'>
-                                                        <Form.Label>Contact Number <span>*</span></Form.Label>
-                                                        <Form.Control
-                                                            type="text"
-                                                            placeholder="Enter Number"
-                                                            name='contact_no'
-                                                            value={user_data.contact}
-                                                            onChange={(e) => setUser_Data({ ...user_data, contact: e.target.value })}
-                                                        />
-                                                    </Form.Group>
-                                                    <Form.Group className='form-group'>
-                                                        <Form.Label>Subject <span>*</span></Form.Label>
-                                                        <Form.Control
-                                                            type="text"
-                                                            placeholder="Enter Subject"
-                                                            name='subject'
-                                                            value={user_data.subject}
-                                                            onChange={(e) => setUser_Data({ ...user_data, subject: e.target.value })}
-                                                        />
-                                                    </Form.Group>
-                                                    <Form.Group className='form-group'>
-                                                        <Form.Label>Message <span>*</span></Form.Label>
-                                                        <Form.Control
-                                                            as="textarea"
-                                                            placeholder="Enter Message"
-                                                            className='textarea'
-                                                            name='desc'
-                                                            value={user_data.desc}
-                                                            onChange={(e) => setUser_Data({ ...user_data, desc: e.target.value })}
-                                                        />
-                                                    </Form.Group>
+                                                    {
+                                                        Object.entries(user_data).map(([key, value], index) => {
+                                                            return <Form.Group className='form-group' key={index}>
+                                                                <Form.Label>{key} <span>*</span></Form.Label>
+                                                                <Form.Control
+                                                                    type={key === 'Email' ? 'email' : 'text'}
+                                                                    placeholder={`Enter ${key}`}
+                                                                    name={key}
+                                                                    value={value}
+                                                                    onChange={(e) => setUser_Data({ ...user_data, [key]: e.target.value })}
+                                                                    as={key === 'Message' ? 'textarea' : 'input'}
+                                                                    className='textarea'
+                                                                />
+                                                            </Form.Group>
+                                                        })
+                                                    }
                                                 </div>
-                                                <Button className='btn-primary' type='submit' >Send Message</Button>
+                                                <Button className='btn-primary' type='submit'>Send Message</Button>
                                             </Form>
                                         </div>
                                     </div>
