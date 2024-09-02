@@ -16,11 +16,12 @@ import { faFacebookF, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/
 import Link from 'next/link';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+// import data from '../../../public/data/custom.json';
 
 const Page = () => {
 
     const router = useRouter()
-    
+
     const top_list_data = [
         { src: image1, name: 'UAE' },
         { src: image2, name: 'Australia' },
@@ -87,11 +88,11 @@ const Page = () => {
     ]
 
     const [user_data, setUser_Data] = useState({
-        Name: '',
-        Email: '',
-        Contact: '',
-        Subject: '',
-        Message: ''
+        name: '',
+        email: '',
+        contact: '',
+        subject: '',
+        message: ''
     });
 
     const [active, setActive] = useState(0);
@@ -104,8 +105,8 @@ const Page = () => {
         console.log(user_data)
         e.preventDefault();
         try {
-            const res = await axios.post(`https://jsonplaceholder.typicode.com/posts`, {
-                user_data
+            const res = await axios.post('https://jsonplaceholder.typicode.com/posts', {
+                user_data,
             })
             console.log(res)
             console.log(res.status)
@@ -113,11 +114,11 @@ const Page = () => {
             console.log(result)
             if (res.status == 201) {
                 setUser_Data({
-                    Name: '',
-                    Email: '',
-                    Contact: '',
-                    Subject: '',
-                    Message: ''
+                    name: '',
+                    email: '',
+                    contact: '',
+                    subject: '',
+                    message: ''
                 })
 
                 router.push(`/home?${JSON.stringify(result)}`)
@@ -221,14 +222,14 @@ const Page = () => {
                                                     {
                                                         Object.entries(user_data).map(([key, value], index) => {
                                                             return <Form.Group className='form-group' key={index}>
-                                                                <Form.Label>{key} <span>*</span></Form.Label>
+                                                                <Form.Label>{key.charAt(0).toUpperCase() + key.slice(1)} <span>*</span></Form.Label>
                                                                 <Form.Control
-                                                                    type={key === 'Email' ? 'email' : 'text'}
-                                                                    placeholder={`Enter ${key}`}
+                                                                    type={key === 'email' ? 'email' : 'text'}
+                                                                    placeholder={`Enter ${key.charAt(0).toUpperCase() + key.slice(1)}`}
                                                                     name={key}
                                                                     value={value}
                                                                     onChange={(e) => setUser_Data({ ...user_data, [key]: e.target.value })}
-                                                                    as={key === 'Message' ? 'textarea' : 'input'}
+                                                                    as={key === 'message' ? 'textarea' : 'input'}
                                                                     className='textarea'
                                                                 />
                                                             </Form.Group>

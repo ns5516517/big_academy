@@ -63,19 +63,41 @@ const Course = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`https://dummyjson.com/products/?limit=9`);
-                if (res.status === 200) {
-                    console.log(res.data)
-                    let data = res.data.products
-                    setProductData(data)
+                const res = await fetch('/data/custom.json');
+                if (res.ok) {
+                    const result = await res.json()
+                    console.log(result)
+                    setProductData(result)
                 }
-                // console.log(productData)
             } catch (error) {
                 console.log(error)
             }
         }
         fetchData()
     }, [])
+
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await axios.get(`src/app/custom.json`);
+    //             if (res.ok) {
+    //                 console.log(res.data)
+    //                 let data = res.data.products
+    //                 setProductData(data)
+    //             }
+    //             // console.log(productData)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    //     fetchData()
+    // }, [])
+
+
+    // useEffect(() => {
+    //     setProductData(dataurl)
+    // })
 
     return (
         <section className="course">
@@ -88,15 +110,19 @@ const Course = () => {
                             <Chips chips={chips} setChips={setChips} removeChip={(index) => removeChip(index)} />
                             <Category_Selector />
                             <div className="main_card_parent">
-                                <Suspense fallback={<Loader />}>
-                                    {
-                                        productData.map((product, index) => {
-                                            // console.log(product.title)
-                                            return <Card key={index} title={product.title} desc={product.description} images={product.images} />
-                                        })
-
-                                    }
-                                </Suspense>
+                                {
+                                    productData.length > 0
+                                        ?
+                                        <Suspense fallback={<Loader />}>
+                                            {
+                                                productData.map((product, index) => {
+                                                    return <Card key={index} title={product.name} desc={product.message} email={product.email} />
+                                                })
+                                            }
+                                        </Suspense>
+                                        :
+                                        <p>Error Loading Data !</p>
+                                }
                             </div>
                             <Filter show={filterShow} setFilterShow={setFilterShow} addChip={(e) => addChip(e)} chips={chips} setChips={setChips}
                             />
