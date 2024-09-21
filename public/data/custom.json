@@ -1,49 +1,58 @@
-[
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-    "email": "Sincere@april.biz",
-    "contact": "92998-3874",
-    "subject": "Kulas Light",
-    "message": [
-      {"date": " 1st August"},
-      {"course":"B.C.A"},
-      {"duration":"6 months"}
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "contact": "90566-7771",
-    "subject": "Victor Plains",
-    "message": [
-      {"date": " 1st August"},
-      {"course":"B.B.A"},
-      {"duration":" 12 months"}
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "email": "Nathan@yesenia.net",
-    "contact": "59590-4157",
-    "subject": "Douglas Extension",
-    "message": [
-      {"date": " 1st August"},
-      {"course":"M.C.A"},
-      {"duration":"18 months"}
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Navdeep singh",
-    "email": "ns5516517@gmail.com",
-    "contact": "7814150136",
-    "subject": "NEXT.JS",
-    "message": [
-      {"date": " 3rd June"},
-      {"course":"Frontend"},
-      {"duration":"6 months"}
-    ]
-  }
-]
+{
+  "data": [
+    {
+      "course_title": "B.A",
+      "course_name": "Bachelor of Arts",
+      "duration": "36 Months",
+      "institute": "The Australian National University"
+    },
+    {
+      "course_title": "B.C.A",
+      "course_name": "Bachelor of Computer Applications",
+      "duration": "24 Months",
+      "institute": "Virginia Tech Language and Culture Institute, Blacksburg, Virginia"
+    },
+    {
+      "course_title": "B.C.A",
+      "course_name": "Bachelor of Computer Applications",
+      "duration": "24 Months",
+      "institute": "American University, United Arab Emirates"
+    },
+    {
+      "course_title": "BCom",
+      "course_name": "Bachelor of Commerce",
+      "duration": "36 Months",
+      "institute": "University of Sydney"
+    },
+    {
+      "course_title": "B.B.A",
+      "course_name": "Bachelor of Business Administration",
+      "duration": "36 Months",
+      "institute": "University of Dubai"
+    },
+    {
+      "course_title": "B.Sc IT",
+      "course_name": "Bachelor of Science in Information Technology",
+      "duration": "36 Months",
+      "institute": "The University of Western Australia"
+    },
+    {
+      "course_title": "B.A",
+      "course_name": "Bachelor of Arts",
+      "duration": "36 Months",
+      "institute": "University of Sydney"
+    },
+    {
+      "course_title": "B.C.A",
+      "course_name": "Bachelor of Computer Applications",
+      "duration": "24 Months",
+      "institute": "Virginia Tech Language and Culture Institute, Blacksburg, Virginia"
+    },
+    {
+      "course_title": "B.C.A",
+      "course_name": "Bachelor of Computer Applications",
+      "duration": "24 Months",
+      "institute": "Massachusetts Institute of Technology"
+    }
+  ]
+}

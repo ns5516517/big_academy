@@ -12,6 +12,8 @@ import { Suspense } from 'react';
 import Loader from './loader';
 import axios from 'axios';
 const Card = lazy(() => import('./card'))
+import dataurl from '../../../public/data/custom.json';
+import Fetch from './fetch';
 
 const Course = () => {
     const [filterShow, setFilterShow] = useState(false)
@@ -63,11 +65,12 @@ const Course = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch('/data/custom.json');
-                if (res.ok) {
-                    const result = await res.json()
-                    console.log(result)
-                    setProductData(result)
+                const res = await axios.get('/data/custom.json');
+                if (res.status) {
+                    const result =  res;
+                    console.log(  result.data.data)
+                    const data =  result.data.data
+                    setProductData(data)
                 }
             } catch (error) {
                 console.log(error)
@@ -75,6 +78,23 @@ const Course = () => {
         }
         fetchData()
     }, [])
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await fetch('/data/custom.json');
+    //             if (res.ok) {
+    //                 const result = await res.json();
+    //                 console.log( await result.data)
+    //                 const data = await result.data
+    //                 setProductData(data)
+    //             }
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    //     fetchData()
+    // }, [])
 
 
     // useEffect(() => {
@@ -97,7 +117,7 @@ const Course = () => {
 
     // useEffect(() => {
     //     setProductData(dataurl)
-    // })
+    // },[])
 
     return (
         <section className="course">
@@ -109,6 +129,7 @@ const Course = () => {
                             <Filter_Result />
                             <Chips chips={chips} setChips={setChips} removeChip={(index) => removeChip(index)} />
                             <Category_Selector />
+                            <Fetch/>
                             <div className="main_card_parent">
                                 {
                                     productData.length > 0
@@ -116,7 +137,7 @@ const Course = () => {
                                         <Suspense fallback={<Loader />}>
                                             {
                                                 productData.map((product, index) => {
-                                                    return <Card key={index} title={product.name} desc={product.message} email={product.email} />
+                                                    return <Card key={index} title={product.course_title} desc={product.course_name} duration={product.duration} institute={product.institute} />
                                                 })
                                             }
                                         </Suspense>

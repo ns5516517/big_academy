@@ -9,21 +9,7 @@ import Link from 'next/link';
 
 const Card = (props) => {
 
-    let course = '';
-    let duration = '';
-    let date = '';
-
-    Array.isArray(props.desc) && props.desc.map((item) => {
-        if (item.course) {
-            course = item.course
-        }
-        if (item.duration) {
-            duration = item.duration
-        }
-        if (item.date) {
-            date = item.date
-        }
-    })
+   
 
     return (
         <>
@@ -37,15 +23,15 @@ const Card = (props) => {
                     <div className="inner_left">
                         <div className="title">
                             <div className="icon"><FontAwesomeIcon icon={faGraduationCap} /></div>
-                            <h3>{course}</h3>
+                            <h3>{props.title}</h3>
                         </div>
                         <p className="course_name">
-                            {props.title}
+                            {props.desc}
                         </p>
                         <div className="date_time">
                             <div className="inner_inner_left">
                                 <div className="time_icon"><FontAwesomeIcon icon={faHistory} /></div>
-                                <div className="time">{duration}</div>
+                                <div className="time">{props.duration}</div>
                             </div>
                             <div className="inner_inner_right inner_inner_left">
                                 <div className="time_icon"><FontAwesomeIcon icon={faHistory} /></div>
@@ -58,7 +44,7 @@ const Card = (props) => {
                             <div className="flag">
                                 <Image src={flag1} alt='flag1' title='...' priority={false} loading='lazy' />
                             </div>
-                            <p className="desc">{date}</p>
+                            <p className="desc">{props.institute}</p>
                         </div>
                         <div className='read_more'><Link href='#'>Read More</Link></div>
                     </div>
